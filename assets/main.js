@@ -19,6 +19,7 @@ for(var key in studente1){
 
 //Creare un array di oggetti di studenti.
 //Ciclare su tutti gli studenti e stampare per ognuno di essi, nome e cognome.
+//(part three)
 var list_student = [
     {
         nome: "Ale",
@@ -46,9 +47,11 @@ var list_student = [
 
 console.log(list_student);
 
-for (var i=0; i<list_student; i++){
+for (var i=0; i<list_student.length; i++){
     var lista = list_student[i];
     console.log(lista);
+    var nome = lista.nome;
+    var cognome = lista.cognome;
     document.getElementById("list").innerHTML = lista.nome + lista.cognome;
 }
 
@@ -58,9 +61,16 @@ for (var i=0; i<list_student; i++){
 
 //Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente 
 //inserendo nell’ordine: nome, cognome e età.
+//(part four)
 
-var nome_utente = prompt("Inserisci un nome:");
-var cognome = prompt("Inserisci un cognome:");
-var age_utente = Number(prompt("Inserisci un'età:"));
+studenti.push({
+    nome: prompt("Inserisci un nome:"),
+    cognome: prompt("Inserisci un cognome:"),
+    age: Number(prompt("Inserisci un'età:"))
+})
 
 
+
+
+//ISSUES
+// - le parti three e four non funzionano
