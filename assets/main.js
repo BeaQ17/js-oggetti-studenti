@@ -3,7 +3,7 @@
 var studente1 = {
     nome: "Anna",
     cognome: "Verdi",
-    età: 23
+    eta: 23
 }
 
 console.log(studente1);
@@ -24,22 +24,22 @@ var list_student = [
     {
         nome: "Ale",
         cognome: "Rossi",
-        età: 23
+        eta: 23
     },
     {
         nome: "Alice",
         cognome: "Bianchi",
-        età: 23
+        eta: 23
     },
     {
         nome: "Laura",
         cognome: "Neri",
-        età: 23
+        eta: 23
     },
     {
         nome: "Marta",
         cognome: "Ambra",
-        età: 23
+        eta: 23
     }
 
     
@@ -52,25 +52,27 @@ for (var i=0; i<list_student.length; i++){
     console.log(lista);
     var nome = lista.nome;
     var cognome = lista.cognome;
-    document.getElementById("list").innerHTML = lista.nome + lista.cognome;
+    document.getElementById("list").innerHTML += lista.nome + " " + lista.cognome + "<br>";
 }
-
-
 
 
 
 //Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente 
 //inserendo nell’ordine: nome, cognome e età.
 //(part four)
+var nome_u = prompt("Inserisci un nome:");
+var cognome_u = prompt("Inserisci un cognome:");
+var age_u = Number(prompt("Inserisci un'età:"));
 
-studenti.push({
-    nome: prompt("Inserisci un nome:"),
-    cognome: prompt("Inserisci un cognome:"),
-    age: Number(prompt("Inserisci un'età:"))
+list_student.push({
+    nome: nome_u,
+    cognome: cognome_u,
+    eta: age_u
 })
 
+console.log(list_student);
 
 
 
-//ISSUES
-// - le parti three e four non funzionano
+
+
